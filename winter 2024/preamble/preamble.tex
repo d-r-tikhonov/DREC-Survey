@@ -1,0 +1,118 @@
+% ==================================================
+
+\usepackage[margin = 1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1, T2A]{fontenc}
+\usepackage{mathtext}
+\usepackage[english, russian]{babel}
+\usepackage{indentfirst}
+\frenchspacing
+
+% ==================================================
+
+% Packages for math
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{dsfont}
+\usepackage{esint}
+
+% ==================================================
+
+% Packages for writing
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{framed}
+\usepackage{csquotes}
+
+% ==================================================
+
+% Miscellaneous packages
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{subcaption}
+\usepackage{caption}
+\captionsetup{format = hang, margin = 10pt, font = small, labelfont = bf}
+\renewcommand{\thefigure}{\hspace{-.333333em}}
+
+\usepackage[bottom]{footmisc}
+\renewcommand{\thefootnote}{*}
+
+%%% Колонтитулы
+\usepackage[pagestyles]{titlesec}
+\newpagestyle{main}{
+	\setheadrule{0.4pt}
+	\sethead{Результаты проведения опроса о качестве преподавания}{}{\hyperlink{intro}{\;Назад к содержанию}}
+	\setfootrule{0.4pt}
+	\setfoot{ФРКТ МФТИ, 2025}{}{\thepage} 
+}
+\pagestyle{main}
+
+%%% Оформление страницы
+\usepackage{extsizes}     % Возможность сделать 14-й шрифт
+\usepackage{geometry}     % Простой способ задавать поля
+\usepackage{setspace}     % Интерлиньяж
+
+\geometry{top=25mm}    % Поля сверху страницы
+\geometry{bottom=30mm} % Поля снизу страницы
+\geometry{left=20mm}   % Поля слева страницы
+\geometry{right=20mm}  % Поля справа страницы
+
+\setlength\parindent{15pt}        % Устанавливает длину красной строки 15pt
+\linespread{1.3}                  % Коэффициент межстрочного интервала
+%\setlength{\parskip}{0.5em}      % Вертикальный интервал между абзацами
+%\setcounter{secnumdepth}{0}      % Отключение нумерации разделов
+%\setcounter{section}{-1}         % Нумерация секций с нуля
+\usepackage{multicol}			  % Для текста в нескольких колонках
+\usepackage{soulutf8}             % Модификаторы начертания
+
+% Hyperlinks setup
+\usepackage{hyperref}
+\definecolor{links}{rgb}{0.36,0.54,0.66}
+\hypersetup{
+    colorlinks  = true,
+    linkcolor   = black,
+    urlcolor    = blue,
+    citecolor   = blue,
+    filecolor   = blue,
+    pdfauthor   = {Author},
+    pdftitle    = {Title},
+    pdfsubject  = {subject},
+    pdfkeywords = {one, two},
+    pdfproducer = {LaTeX},
+    pdfcreator  = {pdfLaTeX},
+}
+
+% ==================================================
+
+\usepackage{titlesec}
+\usepackage[many]{tcolorbox}
+
+% Adjust spacing after the chapter title
+\titlespacing*{\chapter}{0cm}{-2.0cm}{0.50cm}
+\titlespacing*{\section}{0cm}{0.50cm}{0.25cm}
+
+% Indent 
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
+
+\newcounter{commentcounter}
+\setcounter{commentcounter}{0}
+
+% Стиль для комментариев студентов
+\newtcolorbox{commentbox}{
+    enhanced,
+    colback=white,
+    colbacktitle=white,
+    coltitle=black,
+    boxrule=0pt,
+    frame hidden,
+    borderline west={0.5mm}{0.0mm}{black},
+    fonttitle=\bfseries\sffamily,
+    breakable
+}
